@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF_8"/>
+ <meta name =" viewport" content =" width=device_width,initial_scale=1.0"/>
+ <title>Chat</title>
+ <link rel="stylesheet" href="stylesheet.css">
+    
+</head>
+<body>
+     <style>
+   body{
+    background-image:url("https://img.freepik.com/free-photo/liquid-purple-art-painting-abstract-colorful-background-with-color-splash-paints-modern-art_1258-97771.jpg");
+    background-size:cover;
+       }
+   </style>
+     <script>
+    const Q1= "what is the capital of Algeria ?";
+    const A1=new String(" the capital of Algeria is Algiers.");
+    const Q2=new String("what is the color of the sea ?");
+    const A2=new String("the color of the sea is blue.");
+    const Q3=new String( "who is the idventor of the telephone ?");
+    const A3=new String("the idventor of the telephone is Alexander Graham Bell.");
+function getAnswer(question){
+    // Use a switch statement to simplify multiple conditions
+    switch (question.toLowerCase()) {
+        case Q1.toLowerCase():
+            return A1;
+        case Q2.toLowerCase():
+            return A2;
+        case Q3.toLowerCase():
+            return A3;
+        default:
+            return "error";
+    }
+}
+
+function chat() {
+    const choose = prompt("Choose one of these questions:\n1. What is the capital of Algeria?\n2. What is the color of the sea?\n3. Who is the inventor of the telephone?");
+    
+
+    // Validate user choice
+    if (choose === "1" || choose === "2" || choose === "3") {
+        const Question = (choose === "1") ? Q1 : (choose === "2") ? Q2 : Q3;
+        const answer = getAnswer(Question);
+        alert(`User: ${Question}\nChatbot: ${answer}`);
+    } else {
+        alert("Invalid choice. Please choose 1, 2, or 3.");
+    }
+}
+
+// Call the chat function when the page loads
+window.onload = function () {
+    chat();
+};
+        
+    </script>
+  <div >
+  <h1 class ="logo"><a class="in" href ="file:///C:/Program%20Files/Notepad++/index.html">Just ask</a></h1>
+  </div>
+ <div class=" tittle">
+   <center>
+   <h1><font color ="pink"> welcome to our <font color ="blue">"Chat" </font></font></h1>
+   </center> 
+     <div><center><h2> <font color ="blue"> choose one of these questions</font></h2>
+         <h2><font color ="pink"> 1\what is the capital of Algeria ? </font></h2>
+          <h2><font color ="pink"> 2\what is the color of the sea ? </font></h2>
+         <h2><font color ="pink"> 3\who is the idventor of the telephone ? </font></h2></center>
+     </div>
+  
+    </div>
+   </body>
+   </html>
